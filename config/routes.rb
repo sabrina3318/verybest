@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Neighborhood resource:
+
+  # CREATE
+  get("/neighborhoods/new", { :controller => "neighborhoods", :action => "new_form" })
+  post("/create_neighborhood", { :controller => "neighborhoods", :action => "create_row" })
+
+  # READ
+  get("/neighborhoods", { :controller => "neighborhoods", :action => "index" })
+  get("/neighborhoods/:id_to_display", { :controller => "neighborhoods", :action => "show" })
+
+  # UPDATE
+  get("/neighborhoods/:prefill_with_id/edit", { :controller => "neighborhoods", :action => "edit_form" })
+  post("/update_neighborhood/:id_to_modify", { :controller => "neighborhoods", :action => "update_row" })
+
+  # DELETE
+  get("/delete_neighborhood/:id_to_remove", { :controller => "neighborhoods", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Venue resource:
 
   # CREATE
