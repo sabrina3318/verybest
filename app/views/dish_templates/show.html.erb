@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link dish start -->
       <div class="col">
         <a href="/dishes/<%= @dish.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit dish
         </a>
       </div>
-      <!-- Edit link dish end -->
 
-      <!-- Delete link dish start -->
       <div class="col">
         <a href="/delete_dish/<%= @dish.id %>" class="btn btn-block btn-outline-secondary">
           Delete dish
         </a>
       </div>
-      <!-- Delete link dish end -->
     </div>
 
     <dl>
       <dt>
         Cuisine
       </dt>
-      <!-- Display cuisine_id start -->
       <dd>
         <% if @dish.cuisine.present? %>
           <a href="/cuisines/<%= @dish.cuisine_id %>">
@@ -40,37 +35,28 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display cuisine_id end -->
 
       <dt>
         Name
       </dt>
-      <!-- Display name start -->
       <dd>
         <%= @dish.name %>
       </dd>
-      <!-- Display name end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@dish.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@dish.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

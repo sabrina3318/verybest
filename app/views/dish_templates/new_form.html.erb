@@ -5,33 +5,23 @@
 
 <hr>
 
-<!-- Form dish start -->
 <form action="/create_dish" method="post">
-<!-- Form dish end -->
 
-  <!-- Label and input for cuisine_id start -->
   <div class="form-group">
     <label for="cuisine_id">
       Cuisine
     </label>
 
-    <!-- Input for cuisine_id start -->
     <%= select_tag(:cuisine_id, options_from_collection_for_select(Cuisine.all, :id, :name, @dish.cuisine_id), :class => "form-control") %>
-    <!-- Input for cuisine_id end -->
   </div>
-  <!-- Label and input for cuisine_id end -->
 
-  <!-- Label and input for name start -->
   <div class="form-group">
     <label for="name">
       Name
     </label>
 
-    <!-- Input for name start -->
     <input type="text" id="name" name="name" class="form-control">
-    <!-- Input for name end -->
   </div>
-  <!-- Label and input for name end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create dish
