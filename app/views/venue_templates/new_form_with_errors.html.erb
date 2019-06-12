@@ -1,0 +1,32 @@
+<!-- Validation failure messages -->
+<% if @venue.present? %>
+  <% if @venue.errors.any? %>
+    <% @venue.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new venue
+</h1>
+
+
+<hr>
+
+<!-- Form venue start -->
+<form action="/create_venue" method="post">
+<!-- Form venue end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create venue
+  </button>
+</form>
+
+<hr>
+
+<a href="/venues">
+  Go back
+</a>

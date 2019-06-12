@@ -1,0 +1,20 @@
+<h1>
+  Edit venue #<%= @venue.id %>
+</h1>
+
+<hr>
+
+<!-- Form venue start -->
+<form action="/update_venue/<%= @venue.id %>" method="post">
+<!-- Form venue end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update venue
+  </button>
+</form>
+
+<hr>
+
+<a href="/venues">
+  Go back
+</a>
