@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "cuisines#index"
   # Routes for the Neighborhood resource:
 
   # CREATE
