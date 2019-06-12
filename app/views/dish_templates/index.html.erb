@@ -58,7 +58,11 @@
 
         <!-- Display dish.cuisine_id start -->
         <td>
-          <%= dish.cuisine.name %>
+          <% if dish.cuisine.present? %>
+            <a href="/cuisines/<%= dish.cuisine.id %>">
+              <%= dish.cuisine.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display dish.cuisine_id end -->
 

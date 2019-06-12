@@ -34,7 +34,11 @@
       </dt>
       <!-- Display cuisine_id start -->
       <dd>
-        <%= @dish.cuisine_id %>
+        <% if @dish.cuisine.present? %>
+          <a href="/cuisines/<%= @dish.cuisine_id %>">
+            <%= @dish.cuisine.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display cuisine_id end -->
 
