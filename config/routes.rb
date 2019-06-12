@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users
+  # Routes for the User resource:
+
+  # READ
+  get("/users", { :controller => "users", :action => "index" })
+  get("/users/:id_to_display", { :controller => "users", :action => "show" })
+
+  #------------------------------
+
   # Routes for the Dish resource:
 
   # CREATE
