@@ -65,6 +65,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_dish/:id_to_remove", { :controller => "dishes", :action => "destroy_row" })
+  get("/delete_dish_from_cuisine/:id_to_remove", { :controller => "dishes", :action => "destroy_row_from_cuisine" })
 
   #------------------------------
 
