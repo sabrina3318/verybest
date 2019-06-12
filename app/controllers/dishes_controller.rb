@@ -32,6 +32,21 @@ class DishesController < ApplicationController
     end
   end
 
+  def create_row_from_cuisine
+    @dish = Dish.new
+
+    @dish.cuisine_id = params.fetch("cuisine_id")
+    @dish.name = params.fetch("name")
+
+    if @dish.valid?
+      @dish.save
+
+      redirect_to("/cuisines/#{@dish.cuisine_id}", notice: "Dish created successfully.")
+    else
+      render("dish_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @dish = Dish.find(params.fetch("prefill_with_id"))
 

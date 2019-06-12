@@ -1,0 +1,25 @@
+<!-- Form dish start -->
+<form action="/create_dish_from_cuisine" method="post">
+<!-- Form dish end -->
+
+  <!-- Label and input for cuisine_id start -->
+  <!-- Input for cuisine_id start -->
+  <input type="hidden" name="cuisine_id" value="<%= @cuisine.id %>">
+  <!-- Input for cuisine_id end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control" value="<%= @dish.name %>">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create dish
+  </button>
+</form>
