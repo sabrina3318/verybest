@@ -1,6 +1,6 @@
 class NeighborhoodsController < ApplicationController
   def index
-    @neighborhoods = Neighborhood.all
+    @neighborhoods = Neighborhood.page(params[:page]).per(10)
 
     render("neighborhood_templates/index.html.erb")
   end
